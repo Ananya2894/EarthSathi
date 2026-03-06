@@ -4,7 +4,7 @@ AI Hackathon
 
 Prompt :
 
-Build an AI-powered Portfolio Manager agent for banks that helps retail customers analyze their investment portfolios and receive ESG-based green investment recommendations.
+Build an AI-powered Portfolio Manager agent for banks that helps retail customers analyze their investment portfolios and receive ESG-Score Based investment recommendations.
 
 The system should be serverless and built using AWS services.
 
@@ -17,7 +17,6 @@ Most banks provide personalized investment advisory services mainly to high net 
 This solution should improve retail customer engagement and promote sustainable investing.
 
 Technology Stack:
-- Core development environment: AWS Kiro IDE
 - AI model: Amazon Bedrock (Claude model via MCP)
 - Agent deployment: Bedrock AgentCore
 - Portfolio storage: DynamoDB
@@ -27,20 +26,20 @@ Technology Stack:
 - Architecture: fully serverless
 
 System Architecture:
-User Dashboard → API Gateway → Lambda → Kiro Agent → Bedrock Model → Data Tools (Portfolio DB + ESG APIs)
+User Dashboard → API Gateway → Lambda → Kiro Agent → Bedrock Model → Data Tools (Portfolio Dummy Data + ESG APIs)
 
 Agent Role:
-Portfolio Manager AI
+Portfolio Manager Chat Based
 
 Responsibilities:
 1. Analyze a customer's investment portfolio
 2. Retrieve ESG scores for all portfolio assets
 3. Evaluate credit risk and sustainability exposure
 4. Identify low ESG score holdings
-5. Search for bank-approved green energy stocks
+5. Search for bank-approved energy stocks based on good ESG score
 6. Recommend portfolio rebalancing
 7. Estimate potential profit and risk
-8. Generate a 2-year projection of portfolio growth
+8. Generate a 5-year projection of portfolio growth
 
 Agent Tools (implemented via Lambda):
 1. get_customer_portfolio(customer_id)
@@ -50,13 +49,13 @@ Agent Tools (implemented via Lambda):
    - Retrieve ESG score from mock API
 
 3. get_green_energy_stocks()
-   - Return a list of bank-approved green investment assets
+   - Return a list of bank-approved investment assets
 
 4. calculate_portfolio_health_score(portfolio)
    - Compute a portfolio health score based on ESG score, diversification, and risk
 
 5. simulate_portfolio_growth(portfolio)
-   - Estimate portfolio growth for 2 years based on expected returns
+   - Estimate portfolio growth for 5 years based on expected returns
 
 Agent Workflow:
 1. Customer clicks the "Portfolio Manager" button on the dashboard
@@ -66,7 +65,7 @@ Agent Workflow:
 5. Agent calculates portfolio risk and sustainability exposure
 6. Agent compares holdings with high ESG green energy stocks
 7. Agent suggests optimized portfolio changes
-8. Agent simulates expected portfolio value after 2 years
+8. Agent simulates expected portfolio value after 5 years
 9. Agent generates insights and recommendations
 
 Output Requirements:
@@ -89,7 +88,7 @@ Dashboard Components:
 - Bar graph showing ESG scores of each holding
 
 4. Portfolio Projection Graph
-- Line chart showing expected growth for the next 2 years
+- Line chart showing expected growth for the next 5 years
 
 5. Insights Panel
 Generate AI insights such as:
@@ -107,7 +106,7 @@ Create a simple dashboard with:
 - Portfolio health score widget
 - Asset allocation pie chart
 - ESG score visualization
-- 2-year growth projection graph
+- 5-year growth projection graph
 - AI insights panel
 
 Deployment:
