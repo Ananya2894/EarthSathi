@@ -1,6 +1,4 @@
 # EarthSathi
-AI Hackathon
-
 
 Prompt :
 
@@ -17,7 +15,6 @@ Most banks provide personalized investment advisory services mainly to high net 
 This solution should improve retail customer engagement and promote sustainable investing.
 
 Technology Stack:
-- Core development environment: AWS Kiro IDE
 - AI model: Amazon Bedrock (Claude model via MCP)
 - Agent deployment: Bedrock AgentCore
 - Portfolio storage: DynamoDB
@@ -27,10 +24,10 @@ Technology Stack:
 - Architecture: fully serverless
 
 System Architecture:
-User Dashboard → API Gateway → Lambda → Kiro Agent → Bedrock Model → Data Tools (Portfolio DB + ESG APIs)
+User Dashboard → API Gateway → Lambda → Kiro Agent → Bedrock Model → Data Tools (Portfolio Dummy Data + ESG APIs )
 
 Agent Role:
-Portfolio Manager AI
+Portfolio Manager 
 
 Responsibilities:
 1. Analyze a customer's investment portfolio
@@ -49,14 +46,11 @@ Agent Tools (implemented via Lambda):
 2. get_esg_score(stock_symbol)
    - Retrieve ESG score from mock API
 
-3. get_green_energy_stocks()
-   - Return a list of bank-approved green investment assets
-
-4. calculate_portfolio_health_score(portfolio)
+3. calculate_portfolio_health_score(portfolio)
    - Compute a portfolio health score based on ESG score, diversification, and risk
 
-5. simulate_portfolio_growth(portfolio)
-   - Estimate portfolio growth for 2 years based on expected returns
+4. simulate_portfolio_growth(portfolio)
+   - Estimate portfolio growth for 5 years based on expected returns
 
 Agent Workflow:
 1. Customer clicks the "Portfolio Manager" button on the dashboard
@@ -66,7 +60,7 @@ Agent Workflow:
 5. Agent calculates portfolio risk and sustainability exposure
 6. Agent compares holdings with high ESG green energy stocks
 7. Agent suggests optimized portfolio changes
-8. Agent simulates expected portfolio value after 2 years
+8. Agent simulates expected portfolio value after 5 years
 9. Agent generates insights and recommendations
 
 Output Requirements:
@@ -107,7 +101,7 @@ Create a simple dashboard with:
 - Portfolio health score widget
 - Asset allocation pie chart
 - ESG score visualization
-- 2-year growth projection graph
+- 5-year growth projection graph
 - AI insights panel
 
 Deployment:
