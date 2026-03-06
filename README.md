@@ -4,12 +4,12 @@ AI Hackathon
 
 Prompt :
 
-Build an AI-powered Portfolio Manager agent for banks that helps retail customers analyze their investment portfolios and receive ESG-based green investment recommendations.
+Build an AI-powered Portfolio Manager chatbot agent for banks that helps retail customers analyze their investment portfolios and receive ESG-Score Based investment recommendations and future 5 years prediction in graph.
 
 The system should be serverless and built using AWS services.
 
 Goal:
-Create an AI agent that analyzes a customer's portfolio, evaluates ESG scores of existing investments, compares them with bank-approved green stocks, and recommends a more sustainable and profitable portfolio.
+Create an strand agent that analyzes a customer's portfolio, evaluates ESG scores of existing investments, compares them with bank-approved stocks, and recommends a more sustainable and profitable portfolio.
 
 Problem:
 Most banks provide personalized investment advisory services mainly to high net worth individuals, leaving retail investors with limited guidance. Retail investors often lack tools to understand ESG scores, sustainability risks, or portfolio optimization opportunities.
@@ -37,10 +37,10 @@ Responsibilities:
 2. Retrieve ESG scores for all portfolio assets
 3. Evaluate credit risk and sustainability exposure
 4. Identify low ESG score holdings
-5. Search for bank-approved green energy stocks
+5. Search for bank-approved stocks based of ESG score
 6. Recommend portfolio rebalancing
 7. Estimate potential profit and risk
-8. Generate a 2-year projection of portfolio growth
+8. Generate a 5-year projection of portfolio growth
 
 Agent Tools (implemented via Lambda):
 1. get_customer_portfolio(customer_id)
